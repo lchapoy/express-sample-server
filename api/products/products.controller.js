@@ -1,5 +1,5 @@
-var Product = require("./products.model")
-function getAll(req,res,next){
+import Product from "./products.model";
+export function getAll(req,res,next){
   // console.log(req.query)
   Product.find({})
     .then(function(products){
@@ -11,7 +11,7 @@ function getAll(req,res,next){
   // res.json([{name:'apple',price:5},{name:'orange',price:3}])
 }
 
-function getOne(req,res,next){
+export function getOne(req,res,next){
   // console.log('params  ',req.params)
   // console.log('query ',req.query)
   let name = req.params.name
@@ -25,7 +25,7 @@ function getOne(req,res,next){
   // res.json([{name:'apple',price:5},{name:'orange',price:3}])
 }
 
-function create(req,res,next){
+export function create(req,res,next){
   // console.log('body ',req.body);
   Product.create(req.body)
     .then(function(product){
@@ -35,10 +35,4 @@ function create(req,res,next){
       next(err)
     })
   // res.json([{name:'apple',price:5},{name:'orange',price:3}])
-}
-
-module.exports = {
-  create,
-  getAll,
-  getOne
 }

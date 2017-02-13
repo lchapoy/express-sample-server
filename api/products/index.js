@@ -1,9 +1,9 @@
 //Router for products
 //Requirements
-var express = require("express");
-var controller = require("./products.controller")
+import {Router} from "express";
+import * as controller from "./products.controller";
 //create router
-var router = express.Router();
+var router = Router();
 
 //req (request object)
 /*
@@ -22,4 +22,4 @@ router.post("/",controller.create)
 
 
 
-module.exports = router
+export default router

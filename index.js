@@ -1,9 +1,9 @@
 //Requirements
-let express = require('express');
-let bodyParser = require('body-parser');
-let mongoose = require('mongoose');
-let product = require('./api/products');
-let morgan = require('morgan');
+import express from 'express';
+import bodyParser from 'body-parser';
+import mongoose from 'mongoose';
+import product from './api/products';
+import morgan from 'morgan';
 //Instance of app
 let app = express();
 //Connect to MongoDB

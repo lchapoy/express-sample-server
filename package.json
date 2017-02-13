@@ -4,7 +4,8 @@
   "description": "creating simple express server",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node --presets node6 index.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,5 +14,9 @@
     "express": "^4.14.1",
     "mongoose": "^4.8.2",
     "morgan": "^1.8.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-node6": "^11.0.0"
   }
 }

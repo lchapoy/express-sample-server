@@ -1,8 +1,7 @@
 //Requirements
-var mongoose = require("mongoose");
-var Schema = mongoose.Schema;
+import  mongoose from "mongoose";
 
-var productSchema = new Schema({
+var productSchema = new mongoose.Schema({
   name:{
     type:String,
     required:true
@@ -15,4 +14,4 @@ var productSchema = new Schema({
 
 var Product = mongoose.model("Product",productSchema);
 
-module.exports = Product;
+export default Product;
