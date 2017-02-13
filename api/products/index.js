@@ -18,6 +18,7 @@ router.get("/:name",controller.getOne)
 
 //Create One
 router.post("/",controller.create)
+router.put("/:id",controller.update)
 
 
 

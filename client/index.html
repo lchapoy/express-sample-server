@@ -3,6 +3,34 @@
   <head>
     <meta charset="utf-8">
     <title>New App</title>
+    <script>
+      //GET
+      fetch('/products')
+        .then((res)=>res.json())
+        .then((data)=>{
+          console.log(data)
+        })
+
+    //post
+    let product = {
+      name:'lemon'
+    }
+    let id = '58a1e4de9ac8b51970161cbd';
+    let option ={
+      method:'PUT',
+      body:JSON.stringify(product),
+      headers: {
+          'Content-Type': 'application/json'
+      }
+    }
+
+    fetch('/products/'+id,option)
+      .then((res)=>res.json())
+      .then((data)=>{
+        console.log("hello",data)
+      })
+
+    </script>
   </head>
   <body>
     "Hello World"

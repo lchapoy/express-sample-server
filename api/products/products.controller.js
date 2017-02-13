@@ -36,3 +36,14 @@ export function create(req,res,next){
     })
   // res.json([{name:'apple',price:5},{name:'orange',price:3}])
 }
+export function update(req,res,next){
+  // console.log('body ',req.body);
+  Product.update({_id:req.params.id},req.body)
+    .then(function(product){
+      res.send(product);
+    })
+    .catch(function(err){
+      next(err)
+    })
+  // res.json([{name:'apple',price:5},{name:'orange',price:3}])
+}
